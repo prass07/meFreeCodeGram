@@ -8,15 +8,19 @@
         </div>
 
         <div class = "col-9 p-5">
-            <div><h1>{{ $user->username}}</h1></div>
+            <div class = 'd-flex justify-content-between align-items-baseline'>
+                <h1>{{ $user->username}}</h1>
+                <a href = '#'>Add New Post</a>
+            </div>
+
             <div class = "d-flex">
                 <div class = "pr-5"><strong>367</strong> posts</div>
                 <div class = "pr-5"><strong>67.1k</strong> followers</div>
                 <div class = "pr-5"><strong>301</strong> following</div>
             </div>
-            <div class = "pt-4 font-weight-bold">freeCodeCamp.org</div>
-            <div>We're a global community of millions of people learning to code together. We're an open source, donor-supported, 501(c)(3) nonprofit.</div>
-            <div><a href="#">www.freecodecamp.org</a></div>
+            <div class = "pt-4 font-weight-bold">{{$user->profile->title}}</div>
+            <div>{{$user->profile->description}}</div>
+            <div><a href="#">{{$user->profile->url}}</a></div>
         </div>
     </div>
 
